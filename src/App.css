@@ -1,0 +1,28 @@
+:root { font-family: system-ui, sans-serif; color: #20362b; background: #f5f5ed; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button { border: 0; border-radius: .45rem; padding: .7rem 1rem; background: #28543c; color: white; font: inherit; cursor: pointer; }
+button:hover { filter: brightness(1.15); }
+button:focus-visible { outline: 3px solid #b97939; outline-offset: 3px; }
+button:disabled { background: #dbe4db; color: #405546; cursor: default; }
+.landing { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; padding: 7vw; color: white; background: linear-gradient(105deg,#112c22f5,#183d2db8), url('./images/spider.svg') center/cover; }
+.landing h1 { font: bold clamp(3rem,8vw,7rem)/1 Georgia,serif; margin: .2em 0; }
+.landing button { background: #f1e1ab; color: #20362b; font-weight: 700; }
+.eyebrow { letter-spacing: .18em; font-size: .8rem; font-weight: 750; }
+.about { background: #173529e6; border: 1px solid #a7c2ad; padding: 1.5rem; border-radius: .8rem; line-height: 1.6; }
+.shop-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding: 1rem 5vw; background: #183b29; }
+nav, .quantity { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+[aria-current="page"] { text-decoration: underline; text-underline-offset: .25em; }
+.shop { max-width: 70rem; margin: auto; padding: 2rem 1.25rem; }
+.products { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 230px),1fr)); gap: 1rem; }
+.product, .cart-items li { background: white; border: 1px solid #d7e2d7; border-radius: .8rem; overflow: hidden; }
+.product img { width: 100%; display: block; max-height: 220px; object-fit: cover; }
+.product-details { padding: 1rem; }
+.product-details h3 { margin-top: 0; }
+.price { font-weight: 750; }
+.cart-items { padding: 0; display: grid; gap: .8rem; list-style: none; }
+.cart-items li { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; }
+.cart-items img { width: min(30%, 130px); border-radius: .45rem; }
+.cart-items h2 { margin-top: 0; font-size: 1.2rem; }
+.delete { background: #8d3c35; }
+@media (max-width: 640px) { .landing { grid-template-columns: 1fr; gap: 1rem; } }
